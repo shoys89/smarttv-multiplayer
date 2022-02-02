@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer view</title>
+    <script src="//cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="multiplayer.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 50%;
+            height: 50%;
+            float: left;
+        }
+
+        video {
+            height: calc(50vw / 2 - 30px);
+            object-fit: fill;
+            position: absolute;
+        }
+
+        #div1 {
+            background: #DDD;
+        }
+
+        #div2 {
+            background: #AAA;
+        }
+
+        #div3 {
+            background: #777;
+        }
+
+        #div4 {
+            background: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <script>
+        player.add("div1", "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8")
+        player.add("div2", "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8")
+        player.add("div4", "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8")
+        player.add("div3", "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8")
+
+    </script>
+</body>
+
+</html>
